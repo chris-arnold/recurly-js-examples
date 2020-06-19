@@ -4,14 +4,11 @@
   "description": "An example app using electron with Recurly.js",
   "main": "app.js",
   "scripts": {
-    "start": "electron ."
+    "start": "npm run build:client && electron .",
+    "build:client": "cd ./client && REACT_APP_RECURLY_PUBLIC_KEY=ewr1-BrfKUWEllwCxdpRZvZloaJ npm run build"
   },
   "license": "MIT",
   "devDependencies": {
     "electron": "^9.0.4"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "http-proxy-middleware": "^1.0.4"
   }
 }
